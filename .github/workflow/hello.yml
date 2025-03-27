@@ -1,0 +1,24 @@
+name : Test
+on : push
+permissions:
+  contents: read
+  contents: write
+
+job : 
+    autograding test
+build :
+    runs-on : ubuntu-latest
+    steps : 
+        uses : actions/checkout@v2
+   
+
+steps: 
+  - name : workflow
+    uses : node version@v2
+    with :
+      node-version : 18
+    run : echo Hello, World
+
+
+runner : ubuntu-latest
+
